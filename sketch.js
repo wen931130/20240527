@@ -54,7 +54,7 @@ function draw() {
   image(cam, 0, 0);
 }
 
-function drawSkeleton() {
+function drawSkeleton() {  //偵測出各點並畫出線條
   // Draw all the tracked landmark points
   for (let i = 0; i < poses.length; i++) {
     pose = poses[i];

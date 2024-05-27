@@ -7,7 +7,7 @@ https://www.tensorflow.org/hub/tutorials/movenet
 
 let video, bodypose, pose, keypoint, detector;
 let poses = [];
-
+noseImg = image("nose.png")
 async function init() {
   const detectorConfig = {
     modelType: poseDetection.movenet.modelType.MULTIPOSE_LIGHTNING,
@@ -93,9 +93,10 @@ function drawSkeleton() {
     }
     partA = pose.keypoints[0]
       if(partA.score > 0.1){
-      fill("#ff0000")
-      ellipse(partA.x,partA.y,50)
-           fill("#ffffff")
+      // fill("#ff0000")
+      // ellipse(partA.x,partA.y,50)
+      //      fill("#ffffff")
+      image(noseImg,partA.x-25,partA.y-25,50,50)
     }
 
     
